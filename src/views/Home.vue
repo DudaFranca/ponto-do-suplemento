@@ -1,0 +1,31 @@
+<template>
+  <div class="flex flex-col min-h-screen">
+    <div class="bg-logo w-full h-screen bg-cover bg-center">
+      <div class="w-full h-screen flex items-center justify-center bg-category">
+        <Banner />
+      </div>
+    </div>
+    <div class="w-full h-screen pt-28 flex text-center justify-center">
+      <Category />
+    </div>
+    <div class="w-full h-screen pt-28 flex text-center justify-center">
+      <FooterAll />
+    </div>
+  </div>
+</template>
+
+<script>
+  import Banner from '../components/Banner.vue';
+  import Category from '../components/Category.vue';
+  // import Location from './components/Location.vue';
+  import FooterAll from '../components/Footer.vue';
+
+  export default {
+    name: "Home",
+    components: {
+        Banner,
+        Category,
+        FooterAll,
+    }
+  }
+</script>
