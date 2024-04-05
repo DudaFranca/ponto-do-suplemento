@@ -5,10 +5,10 @@
         <Banner />
       </div>
     </div>
-    <div class="w-full h-screen pt-28 flex text-center justify-center">
+    <div class="w-full pt-28 flex text-center justify-center">
       <Category />
     </div>
-    <div class="w-full h-screen pt-28 flex text-center justify-center">
+    <div class="w-full pt-28 flex">
       <FooterAll />
     </div>
   </div>
