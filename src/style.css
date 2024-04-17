@@ -44,3 +44,7 @@
 .border-category {
   border-radius: 10px;
 }
+
+.border-category-top {
+  border-radius: 10px 10px 0 0;
+}

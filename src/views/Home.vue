@@ -2,10 +2,13 @@
   <div class="flex flex-col min-h-screen">
     <div class="bg-logo w-full h-screen bg-cover bg-center">
       <div class="w-full h-screen flex items-center justify-center bg-category">
-        <Banner />
+        <Banner @redirect-to-category="redirectToCategory" />
       </div>
     </div>
-    <div class="w-full pt-28 flex text-center justify-center">
+    <div 
+      ref="category" 
+      class="w-full pt-28 flex text-center justify-center"
+    >
       <Category />
     </div>
     <div class="w-full pt-28 flex">
@@ -26,6 +29,17 @@
         Banner,
         Category,
         FooterAll,
+    },
+    data() {
+      return {
+        
+      }
+    },
+    methods: {
+      redirectToCategory() {
+        const categoryElement = this.$refs.category;
+        categoryElement.scrollIntoView({behavior: "smooth"})
+      }
     }
   }
 </script>

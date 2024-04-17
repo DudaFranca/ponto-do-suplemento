@@ -16,7 +16,10 @@
         :key="index"
         class="relative md:col-span-1"
       >
-        <a href="#">
+        <router-link 
+          :to="'/produtos/' + category.id"
+          @click="categoryProduct(category)"
+        >
           <img
             :src="category.img" 
             class="border-category"
@@ -26,25 +29,29 @@
               {{ category.name }}
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import { mapState, mapActions } from "vuex";
+
   export default {
+    name: "Category",
     data() {
       return {
-        categorys: [
-          { name: 'Whey Protein', img: '../../public/whey.png', link: '' },
-          { name: 'Hiper Calórico', img: '../../public/hiper.png', link: '' },
-          { name: 'Whey Isolado e Zero Lactose', img: '../../public/isolate.png', link: '' },
-          { name: 'Creatina', img: '../../public/creatina.png', link: '' },
-          { name: 'Pré Treino', img: '../../public/prohibido.png', link: '' },
-          { name: 'Thermogenico', img: '../../public/thermo.png', link: '' },
-          { name: 'Suplementação', img: '../../public/testo.png', link: '' },
-        ]
+        
+      }
+    },
+    computed: {
+      ...mapState(["category", "categorys"]),
+    },
+    methods: {
+      ...mapActions(["ActionSetCategory"]),
+      categoryProduct(category){
+        this.ActionSetCategory(category);
       }
     }
   }
