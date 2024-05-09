@@ -4,12 +4,12 @@ import ProductList from "../views/ProductList.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/ponto-do-suplemento/",
     name: "Home",
     component: Home,
   },
   {
-    path: "/produtos/:categoryId",
+    path: "/ponto-do-suplemento/produtos/:categoryId",
     name: "ProductList",
     component: ProductList,
   },
