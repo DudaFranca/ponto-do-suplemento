@@ -21,7 +21,7 @@
           @click="categoryProduct(category)"
         >
           <img
-            :src="'/ponto-do-suplemento/public' + category.img" 
+            :src="'/ponto-do-suplemento/assets' + category.img" 
             class="border-category"
           >
           <div class="absolute inset-0 flex items-center justify-center p-4 bg-category">

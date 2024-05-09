@@ -22,7 +22,7 @@
             class="relative md:col-span-1 border border-blue border-category mb-10"
           >
             <img 
-              :src="'/ponto-do-suplemento/public' + product.img"
+              :src="'/ponto-do-suplemento/assets' + product.img"
               class="border-category-top"
             >
             <div class="font-bold text-2xl mt-5">
