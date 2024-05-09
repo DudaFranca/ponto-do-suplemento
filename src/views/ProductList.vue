@@ -22,7 +22,7 @@
             class="relative md:col-span-1 border border-blue border-category mb-10"
           >
             <img 
-              :src="product.img"
+              :src="'/ponto-do-suplemento/public' + product.img"
               class="border-category-top"
             >
             <div class="font-bold text-2xl mt-5">
@@ -41,7 +41,10 @@
                 v-for="(flavor, i) in product.flavors"
                 :key="i"
               >
-                <a :href="'https://api.whatsapp.com/send?phone=5581997328920&text=Olá, gostaria de pedir comprar um ' + product.name + ' sabor ' + flavor.name">
+                <a 
+                  :href="'https://api.whatsapp.com/send?phone=5581997328920&text=Olá, gostaria de pedir um ' + product.name + ' sabor ' + flavor.name"
+                  target="_blank"
+                >
                   <div class="border rounded-full mx-2 my-1 p-1 bg-blue text-white">
                     {{ flavor.name }}
                   </div>
