@@ -17,7 +17,7 @@
         class="relative md:col-span-1"
       >
         <router-link 
-          :to="'/produtos/' + category.id"
+          :to="'/ponto-do-suplemento/produtos/' + category.id"
           @click="categoryProduct(category)"
         >
           <img
